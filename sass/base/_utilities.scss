@@ -1,0 +1,24 @@
+.u-margin-bottom-small{margin-bottom: 3rem;}
+.u-margin-bottom-medium{margin-bottom: 5rem;}
+.u-margin-bottom-large{margin-bottom: 8rem;}
+
+.u-margin-top-small{margin-top: 3rem;}
+.u-margin-top-medium{margin-top: 5rem;}
+.u-margin-top-large{margin-top: 8rem;}
+
+.u-margin-auto{margin-right: auto;margin-left: auto;}
+.u-margin-zero{margin: 0 !important;}
+.u-margin-bottom-zero{margin-bottom: 0;}
+
+.u-center-text{text-align: center;}
+
+.u-margin-0{margin: 0;}
+@include respond(tab-port){
+    .u-margin-bottom-small{margin-bottom: 1.5rem;}
+    .u-margin-bottom-medium{margin-bottom: 3.5rem;}
+    .u-margin-bottom-large{margin-bottom: 6rem;}
+
+    .u-margin-top-small{margin-top: 1.5rem;}
+    .u-margin-top-medium{margin-top: 3.5rem;}
+    .u-margin-top-large{margin-top: 6rem;}
+}

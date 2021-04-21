@@ -1,0 +1,102 @@
+.heading-primary{
+    @include defShadow(texts);
+    &--main{
+        text-transform: uppercase;
+        font-size: 6rem;
+        margin-bottom: 3rem;
+        color: var(--color-gray-dark);
+        line-height: 1.15;
+        color: var(--color-white);
+        display: block;
+        max-width: 50rem;
+    }
+    &--sub{
+        font-size: 1.6rem;
+        color: var(--color-white);
+        margin-bottom: 3rem;
+        display: block;
+        font-weight: 400;
+    }
+    @include respond(tab-port){
+        // text-align: center;
+        &--main{
+            // margin: 0 auto 3rem;
+            font-size: 4rem;
+        }
+        &--main, &--sub{
+            margin-bottom: 1rem;
+        }
+        &--sub{
+            font-weight: 200;
+            font-size: 1.4rem;
+        }
+    }
+}
+.heading-secondary{
+    // margin: 0 auto;
+    text-transform: uppercase;
+    &--main{
+        font-size: 1.6rem;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        padding: 0.5rem 1.5rem;
+        border-radius: 10rem; 
+        margin-bottom: 3rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        display: inline-block;
+        @include defShadow($pos: inset, $type: boxs);
+        @include defShadow(texts);
+    }
+    &--sub{
+        font-size: 5rem;
+        color: var(--color-gray-dark);
+        margin-bottom: 4rem;
+        display: block;
+        letter-spacing: -2px;
+        word-spacing: 2px;
+        max-width: 50rem;
+        line-height: 1;
+        &--white{
+            color: var(--color-white);
+        }
+
+    }
+    @include respond(tab-port){
+        &--sub{font-size: 4rem;}
+    }
+}
+.heading-tertiary{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-gray-dark);
+    margin-bottom: 1rem;
+    &--white{color: var(--color-white);}
+
+}
+.heading-quaternary{
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    color: #ccc;
+    letter-spacing: 1px;
+}
+.paragraph{
+    font-size: 1.4rem;
+    color: var(--color-gray-light);
+    letter-spacing: 1px;
+    max-width: 80rem;
+    margin: 0 auto 3rem;
+    display: block;
+    &--light{
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 400;
+    }
+    &--white{color: var(--color-white);}
+    &--black{color: var(--color-primary-dark);}
+    // @include respond(tab-port){
+    //     max-width: 40rem;
+    // }
+}

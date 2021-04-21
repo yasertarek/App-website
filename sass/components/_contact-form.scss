@@ -1,0 +1,35 @@
+.contact-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & > *{
+        &:not(:last-child){
+            margin-bottom: 3rem;
+        }
+    }
+    &__input{
+        flex-basis: calc(50% - 3rem);
+        font-size: var(--font-default);
+        padding: 1rem 2rem;
+        border-radius: 10rem;
+        outline: none;
+        border: 1px solid #ccc;
+    }
+    &__input::-webkit-input-placeholder{
+        color: #ccc;
+    }
+    &__msg{
+        flex-basis: 100%;
+        border-radius: 1rem;
+        padding: 2rem;
+        height: 20rem;
+        border: 1px solid #ccc;
+    }
+    &__msg::placeholder{
+        color: #ccc;
+        font-family: inherit;
+    }
+    @include respond(tab-port){
+        &__input{flex-basis: 100%;}
+    }
+}

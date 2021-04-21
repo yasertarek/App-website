@@ -1,0 +1,106 @@
+.slider{
+    &__arrow{
+        background-color: var(--color-secondary);
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:not(:last-child){margin-right: 1rem;}
+        &--prev{}
+        &--next{}
+        &-icon{
+            width: 50%;
+            height: 50%;
+            &--prev{
+                margin-left: -0.5rem;
+            }
+            &--next{
+                margin-left: 0.5rem;
+            }
+        }
+    }
+    &__item-set{
+        width: 87.5rem; // NEW
+        position: relative;
+        height: 40rem;
+        overflow: hidden;
+        max-width: 100vw;
+    }
+    &__item{
+        background-color: #fff;
+        border: 1px solid rgba(249, 172, 41, 0.2);
+        border-radius: 1rem;
+        width: 35rem;
+        padding: 5rem 3rem;
+        /* display: inline-block; */
+        position: absolute;
+        right: 0;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        &--active{
+            opacity: 1;
+            left: 26.25rem; //NEW
+            background-color: #fef2ee;
+        }
+        &--next{
+            opacity: 0.5;
+            left: calc(100% - 17.5rem); //NEW
+        }
+        &--prev{
+            left: -17.5rem;
+            opacity: 0.5;
+        }
+        &--right{
+            left: 100%; //NEW
+            opacity: 0;
+            visibility: hidden;
+        }
+        &--left{
+            left: -35rem;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    &__user-box{
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    &__user-img{
+        border-radius: 50%;
+        max-width: 8rem;
+        margin-right: 1rem;
+    }
+    &__user-data{
+        display: flex;
+        flex-direction: column;
+    }
+    &__user-name{
+        /* display: block; */
+        margin-bottom: 0.2rem;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+    &__user-pos{
+        /* display: block; */
+        color: #a1a1a1;
+    }
+    @include respond(phone){
+        &__item{
+            &--active{
+                left: calc(50% - 17.5rem) !important; //NEW
+            }
+            &--active{transform: scale(1);}
+            &--next, &--prev{
+                opacity: 0.25 !important;
+                transform: scale(0.75);
+            }
+            &--next{
+                left: calc(100% - 10rem); //NEW
+            }
+        }
+    }
+}

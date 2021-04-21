@@ -1,0 +1,67 @@
+.btn{
+    &, &:link, &:visited{
+        font-size: var(--font-default);
+        background-color: transparent;
+        border: none;
+        color: var(--color-white);
+        padding: 1.25rem 5.5rem;
+        letter-spacing: 1px;
+        text-decoration: none;
+        border-radius: 10rem;
+        font-weight: 600;
+        display: inline-block;
+        cursor: pointer;
+        @include defShadow(boxs);
+    }
+    &--border{
+        &, &:link, &:visited{
+            border: 1px solid var(--color-gray-light);
+            @include defShadow(texts);
+            box-shadow: none;
+        }
+    }
+    &--red-border{
+        &, &:link, &:visited{
+            border: 1px solid rgba(236, 102, 61, 0.25);
+            color: var(--color-secondary);
+            box-shadow: none;
+        }
+    }
+    &--red{
+        &, &:link, &:visited{
+        background-color: var(--color-secondary);
+        // box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+        }
+    }
+    &--animation-hover{
+        position: relative;
+        transition: all 0.2s ease-in-out;
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-secondary);
+            z-index: -1;
+            border-radius: 10rem;
+            transform: scale(1);
+            opacity: 1;
+            transition: all 0.2s ease-in-out;
+        }
+        &:hover{
+            transform: translateY(-3px);
+            @include defShadow(boxs, $y: 7px, $opacity: 0.25);
+            &::after{
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+        &:active{
+            transform: translateY(-1px);
+            @include defShadow(boxs, $y: 3px);
+
+        }
+    }
+}

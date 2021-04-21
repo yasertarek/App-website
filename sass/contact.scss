@@ -1,0 +1,59 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/reset";
+@import "base/typography";
+@import "base/utilities";
+
+@import "layout/grid";
+@import "layout/navigation";
+@import "layout/footer";
+
+@import "components/pages-header";
+@import "components/button";
+@import "components/social-links";
+@import "components/contact-form";
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+    margin-top: 5rem;
+    border-radius: 1rem;
+  }
+.sec-contact-data{
+    padding: 10rem 0;
+    &__component{
+        padding: 3rem;
+        border: 1px solid var(--color-tertiary);
+        border-radius: 1rem;
+        flex-basis: 33.333333%;
+        &:not(:last-child){margin-right: 3rem;}
+    }
+    &__icon-container{
+        width: 7.5rem;
+        height: 7.5rem;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--red{background-color: var(--color-secondary);}
+        &--blue{background-color: var(--color-primary);}
+        &--yellow{background-color: var(--color-tertiary);}
+    }
+    &__icon{
+        width: 50%;
+        height: 50%;
+    }
+    &__content{
+        font-size: var(--font-default);
+        color: var(--color-primary-dark);
+    }
+}
+.sec-contact-form{padding: 10rem 0;}
+.sec-signup{
+    background-color: var(--color-primary);
+    padding: 10rem 0;
+}

@@ -1,0 +1,120 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/reset";
+@import "base/typography";
+@import "base/utilities";
+
+@import "layout/grid";
+@import "layout/navigation";
+@import "layout/footer";
+
+@import "components/pages-header";
+@import "components/button";
+@import "components/article";
+@import "components/social-links";
+/******** STYLING ARTICLE ********/
+.sec-service{
+    padding: 10rem 0;
+    &__text{}
+    &__img-container{
+        // CONTENT
+    }
+    &__img{
+        width: 85%;
+        margin-left: auto;
+        display: block;
+        border-radius: 1rem;
+    }
+    @include respond(tab-port){
+        padding: 5rem 0;
+        &__img{
+            width: 100%;
+        }
+    }
+}
+.sec-features{
+    padding: 10rem 0;
+    &__boost{
+        padding: 7rem 5rem;
+        position: relative;
+        border: 1px solid var(--color-tertiary);
+        border-radius: 1rem;
+    }
+    &__start-icon-container{
+        background-color: var(--color-tertiary);
+        border-radius: 50%;
+        position: absolute;
+        right: 7rem;
+        top: 7rem;
+        max-width: 10rem;
+        max-height: 10rem;
+    }
+    &__start-icon-circle{
+        fill: var(--color-tertiary);
+        width: 100%;
+        height: 100%;
+    }
+    &__start-icon-polygon{
+        fill: var(--color-white);
+        width: 100%;
+        height: 100%;
+    }
+    &__features{
+        margin-top: 3rem;
+    }
+    &__feature{
+        &--red{background-color: var(--color-secondary);}
+        &--blue{background-color: var(--color-primary);}
+        &--yellow{background-color: var(--color-tertiary);}
+        padding: 5rem;
+        border-radius: 1rem;
+        &:not(:last-child){
+            margin-right: 3rem;
+        }
+    }
+    &__feature--yellow &__feature-icon-container{background-color: var(--color-secondary);}
+    &__feature-icon-container{
+        width: 7rem;
+        height: 7rem;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-tertiary);
+        margin-bottom: 3rem;
+    }
+    &__feature-icon{
+        width: 4rem;
+        height: 4rem;
+    }
+    @include respond(tab-port){
+        &__boost{
+            padding: 3rem 8rem 3rem 3rem;
+        }
+        &__start-icon-container{
+            right: 2rem;
+            top: 3rem;
+            max-width: 6rem;
+            max-height: 6rem;
+        }
+        &__feature{
+            &:not(:last-child){
+                margin-right: 0rem;
+            }
+        }
+    }
+}
+.sec-blog{
+    padding: 10rem 0;
+    @include respond(tab-port){
+        padding: 5rem 0;
+    }
+}
+.sec-signup{
+    background-color: var(--color-primary);
+    padding: 15rem 0;
+    @include respond(tab-port){
+        padding: 10rem 0;
+    }
+}

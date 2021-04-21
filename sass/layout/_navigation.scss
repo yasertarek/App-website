@@ -1,0 +1,166 @@
+.navigation{
+    // position: absolute;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10; // BeCause of CLIP-PATH PROPERTY OF HEADER
+    background-color: transparent;
+    // margin-top: 1rem;
+    transition: all 0.5s ease-in-out;
+    &__flex-parent{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        &, &:link, &:visited{
+            font-weight: 900;
+            font-size: 4rem;
+            text-transform: uppercase;
+            color: var(--color-white);
+            text-decoration: none;
+            @include defShadow(texts);
+        }
+    }
+    &__nav{
+        font-size: 1.6rem;
+        font-weight: 300;
+        margin-left: 3rem;
+        align-self: stretch;
+        display: flex;
+    }
+    &__list{
+        list-style: none;
+        display: flex;
+    }
+    &__item{
+        display: flex;
+        &:not(:last-child){
+            margin-right: 6rem;
+        }
+    }
+    &__link{
+        &, &:link, &:visited{
+            text-decoration: none;
+            color: var(--color-white);
+            background-image: linear-gradient(120deg, transparent 50%, var(--color-white) 50%);
+            transition: all 0.2s;
+            background-size: 300%;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+        }
+    &:hover, &--active{
+        background-position: 100%;
+        color: var(--color-gray-dark) !important;
+    }
+    }
+    &__menu{
+        display: none;
+        &, &:link, &:visited{
+            // position: fixed;
+            // top: 1rem;
+            // right: 3rem;
+            background-color: var(--color-secondary);
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+        &-bars{
+            width: 2rem;
+            height: 1px;
+            background-color: var(--color-white);
+            position: relative;
+            transition: all 0.2s;
+            &::after, &::before{
+                content: "";
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 1.5rem;
+                height: 1px;
+                background-color: var(--color-white);
+                transition: all 0.2s;
+            }
+            &::after{top: 0.8rem;}
+            &::before{top: -0.8rem;}
+        }
+    }
+    @include respond(tab-port){
+        &__nav{
+            background-color: var(--color-secondary);
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            transition: all 0.8s ease-in-out;
+            clip-path: circle(4rem at 100% -10%);  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 50;
+        }
+        &__list{
+            visibility: hidden;
+            opacity: 0;
+            transform: translateX(-50rem);
+            transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            display: flex;
+            flex-direction: column;
+        }
+        &__nav--open{
+            clip-path: circle(150rem at 100% -10%);  
+        }
+        &__nav--open &__list{
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(0);
+        }
+        &__item{
+            margin-right: 0 !important;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+        &__menu{
+            display: flex;
+            z-index: 200;
+            &--close{
+                @include defShadow(boxs);
+            }
+            &--close &-bars{
+                height: 0;
+                // visibility: hidden;
+                &::after, &::before{
+                    left: 50%;
+                    top: 50%;
+                    width: 2rem;
+                }
+                &::after{
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+                &::before{
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+// &-bars{
+//     &::after, &::before{
+//         content: "";
+//         position: absolute;
+//         left: 50%;
+//         transform: translateX(-50%);
+//         width: 1.5rem;
+//         height: 1px;
+//         background-color: var(--color-white);
+//     }
+//     &::after{top: 0.8rem;}
+//     &::before{top: -0.8rem;}
+// }

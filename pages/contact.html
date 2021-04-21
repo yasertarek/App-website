@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+
+     <!-- WEBSITE FONT -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+     <!-- WEBSITE FONT -->
+     <link rel="icon" href="../img/svgs/fav-icon.svg" />
+ 
+     <link rel="stylesheet" href="../css/contact.css" />
+</head>
+<body>
+    <div class="navigation"> <!-- NAVIGATION SECTION START -->
+        <div class="container">
+            <div class="navigation__flex-parent">
+                <a href="../home.html" class="navigation__logo">APP</a>
+                <nav class="navigation__nav">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="about.html" class="navigation__link navigation__link">About</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Portfolio</a></li>
+                        <li class="navigation__item"><a href="#" class="navigation__link">Blog</a></li>
+                        <li class="navigation__item"><a href="contact.html" class="navigation__link navigation__link--active">Contact</a></li>
+                    </ul>
+                </nav>
+            <a href="#" class="btn btn--border">Sign Up</a>
+            <a href="#" class="navigation__menu"><span class="navigation__menu-bars"></span></a>
+            </div>
+        </div>
+    </div> <!-- NAVIGATION SECTION END -->
+    <header class="pages-header"> <!-- HEADER SECTION START -->
+        <div class="container">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Contact</span>
+            </h1>
+        </div>
+    </header> <!-- HEADER SECTION END -->
+    <main>
+        <section class="sec-contact-data">
+            <div class="container">
+                <div class="flex-parent">
+                    <div class="sec-contact-data__component">
+                        <div class="sec-contact-data__icon-container sec-contact-data__icon-container--red"><img src="../img/svgs/Telephone Icon.svg" alt="Phone Icon" class="sec-contact-data__icon"></div>
+                        <h3 class="heading-tertiary u-margin-top-small">Phone</h3>
+                        <p class="paragraph">Please call us and we'll be happy to assist you.</p>
+                        <p class="sec-contact-data__content">+1(234)-567-8901</p>
+                    </div>
+                    <div class="sec-contact-data__component">
+                        <div class="sec-contact-data__icon-container sec-contact-data__icon-container--blue"><img src="../img/svgs/email.svg" alt="Phone Icon" class="sec-contact-data__icon"></div>
+                        <h3 class="heading-tertiary u-margin-top-small">Email</h3>
+                        <p class="paragraph">Please Email us and we'll be happy to assist you.</p>
+                        <p class="sec-contact-data__content">support@company.com</p>
+                    </div>
+                    <div class="sec-contact-data__component">
+                        <div class="sec-contact-data__icon-container sec-contact-data__icon-container--yellow"><img src="../img/svgs/map.svg" alt="Phone Icon" class="sec-contact-data__icon"></div>
+                        <h3 class="heading-tertiary u-margin-top-small">Address</h3>
+                        <p class="paragraph">Come and meet us.</p>
+                        <p class="sec-contact-data__content">361-7938 feugiat St.</p>
+                        <p class="sec-contact-data__content">Willston Nevada 58521</p>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+        </section>
+        <section class="sec-contact-form">
+            <div class="container">
+                <h2 class="heading-secondary u-center-text">
+                    <span class="heading-secondary--main">Contact</span>
+                    <span class="heading-secondary--sub u-margin-auto">Connect With Us</span>
+                </h2>
+                <p class="paragraph u-center-text">Best for active freelancers and designers who need more projects and premium features. Export your code and unlock more pages for your unhosted projects.</p>
+                <form action="#" class="contact-form">
+                    <input type="text" placeholder="Your name" class="contact-form__input" />
+                    <input type="email" placeholder="Your Email" class="contact-form__input" />
+                    <textarea class="contact-form__msg" placeholder="Message"></textarea>
+                    <button type="submit" class="btn btn--red btn--animation-hover u-margin-auto">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <section class="sec-signup">
+        <div class="container">
+            <div class="flex-parent">
+                <div class="sec-signup__text">
+                    <h2 class="heading-secondary">
+                        <span class="heading-secondary--sub heading-secondary--sub--white">Available, Get It Now!</span>
+                    </h2>
+                    <p class="paragraph paragraph--white">Best for Active freelancers and designers who need</p>
+                </div>
+                <div class="sec-signup__btn-parent"><a href="#" class="btn btn--red btn--animation-hover">Sign Up</a></div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__flex">
+                <div class="footer__social-icons">
+                    <h4 class="heading-quaternary">Social</h4>
+                    <div class="footer__links-container">
+                        <a href="#" class="icon-link">
+                            <img src="../img/svgs/facebook-Char.svg" alt="Facebook icon" class="icon-link__icon">
+                        </a>
+                        <a href="#" class="icon-link">
+                            <img src="../img/svgs/twitter.svg" alt="Twitter Icon" class="icon-link__icon">
+                        </a>
+                        <a href="#" class="icon-link">
+                            <img src="../img/svgs/instagram.svg" alt="Instagram Icon" class="icon-link__icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__contact">
+                    <h4 class="heading-quaternary">Contact</h4>
+                    <p class="footer__contact-address">
+                        <span class="footer__contact-address-part">361-7936 Feugiat St.</span>
+                        <span class="footer__contact-address-part">Williston Nevada 58521</span>
+                    </p>
+                    <p class="footer__contact-mail">support@company.com</p>
+                    <p class="footer__contact-phone">+1(234)-567-8901</p>
+                </div>
+                <div class="footer__nav">
+                    <h4 class="heading-quaternary">Menu</h4>
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item"><a href="about.html" class="footer__nav-link">About</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Portfilio</a></li>
+                        <li class="footer__nav-item"><a href="#" class="footer__nav-link">Blog</a></li>
+                        <li class="footer__nav-item"><a href="contact.html" class="footer__nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__subscribe">
+                    <h4 class="heading-quaternary">Subscribe</h4>
+                    <form action="#" class="footer__subscribe-form">
+                        <input type="email" placeholder="Your Email" class="footer__subscribe-form__input" />
+                        <button class="footer__subscribe-form__btn"><img src="../img/svgs/send.svg" class="footer__subscribe-form__btn-icon" /></button>
+                    </form>
+                </div>
+            </div>
+            <div class="flex-parent">
+                <div class="footer__docs-links">
+                    <a href="#" class="footer__doc-link">Privacy Policy</a>
+                    <a href="#" class="footer__doc-link">Terms &amp; Conditions</a>
+                </div>
+                <div class="footer__copyright">
+                    <p class="footer__copyright-text">Coded and developed by: dev/ <a href="#" class="footer__link footer__link--dev">Yasser Tarek</a> &copy; 2021 Copyright reserved</p>
+                    <p class="footer__copyright-text">Design Inspired from ui/ux designer/ <a href="#" class="footer__link footer__link--designer">Laaqiq</a> &copy; 2019 Copyright reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/contact.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+@mixin respond($brPoint){
+    @if $brPoint == phone{
+        @media only screen and (max-width: 37.5em){@content}; // 600px / 16px = 37.5em
+    }
+    @if $brPoint == tab-port{
+        @media only screen and (max-width: 56.25em){@content}; // 900px / 16px = 56.25em
+    }
+    @if $brPoint == tab-land{
+        @media only screen and (max-width: 75em){@content}; // 1200px / 16px = 75em
+    }
+    @if $brPoint == wide-screen{
+        @media only screen and (min-width: 112.5em){@content}; // 1800px / 16px = 112.5em 
+    }
+}
+@mixin defShadow($type:boxs, $pos: "", $x: 0, $y: 2px, $blur: 20px, $opacity: 0.2){
+    @if $type == boxs{box-shadow: unquote($pos) $x $y $blur rgba(0, 0, 0, $opacity);}
+    @if $type == texts{text-shadow: $x $y $blur rgba(0, 0, 0, $opacity);}
+}

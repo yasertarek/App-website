@@ -1,0 +1,40 @@
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+    @include respond(tab-land){
+        padding: 0 3rem;
+    }
+    @include respond(tab-port){
+        max-width: 50rem;
+    }
+}
+.flex-parent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--wrap{
+        flex-wrap: wrap;
+    }
+    @include respond(tab-port){
+        flex-wrap: wrap;
+        justify-content: center;
+        & > *{
+            flex-basis: 100% !important;
+            &:not(:last-child){margin: 3rem auto;}
+        }
+    }
+}
+.col-1-of-2{
+    flex-basis: 50%;
+}
+.col-1-of-3{
+    flex-basis: 33.333333;
+}
+.col-2-of-3{
+    flex-basis: 66.666667;
+}
+@include respond(tab-port){
+    [class ~= col-]{
+        flex-basis: 100% !important;
+    }
+}
